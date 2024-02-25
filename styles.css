@@ -1,0 +1,100 @@
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 3rem;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.profile-image img{
+    border-radius: 50%;
+}
+
+.profile-stat-count{
+    font-weight: bold;
+}
+
+.profile{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile-stats li{
+    display: flex;
+    font-size: medium;
+    gap: 5px;
+}
+
+.profile-bio{
+    display: flex;
+    font-size: medium;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Creates a responsive grid */
+    grid-gap: 20px; /* Space between items */
+    padding: 20px; /* Padding around the grid */
+  }
+  
+  .gallery-item {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /*  adds some shadow for depth */
+    overflow: hidden; /* Ensures no content spills out */
+    display: flex;
+    flex-direction: column; /* Stack the image and the info */
+  }
+  
+  .gallery-image {
+    width: 100%; /* Ensures image covers the width of the gallery item */
+    height: 100%; /* Maintain aspect ratio */
+    display: block;
+  }
+  
+  .gallery-item-info {
+    padding: 15px; /* Padding inside the info area */
+    text-align: center; /* Center the text */
+  }
+  
+  .gallery-item-info ul {
+    list-style: none; /* Removes list bullets */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items in a row */
+    justify-content: center; /* Center the items horizontally */
+    gap: 10px; /* Space between items */
+  }
+  
+  .gallery-item-info i {
+    margin-right: 5px; /* Space between icon and text */
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(50%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
